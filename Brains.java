@@ -7,11 +7,7 @@ class Brains {
     public boolean playerGewonnen(char[] x, char[] y) {
         // x = computer, y = speler
         // Check of de speler gewonnen heeft
-        if (Arrays.equals(x, y)) {
-            return true;
-        } else {
-            return false;
-        }
+        return Arrays.equals(x, y);
     }
 
     public int correctPositions(char[] x, char[] y) {
@@ -33,8 +29,8 @@ class Brains {
         // reset het aantal correct geraden letters naar 0
         int charInCode = 0;
         //check of de speler letters heeft geraden die in de computercode staan
-        for (int i = 0; i < y.length; i++) {
-            if (Arrays.toString(x).indexOf(y[i]) != -1) {
+        for (char c : y) {
+            if (Arrays.toString(x).indexOf(c) != -1) {
                 ++charInCode;
             }
         }
