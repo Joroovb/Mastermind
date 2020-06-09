@@ -4,8 +4,9 @@ public class GameLoop {
         // Geef het spel hersenen
         Brains brains = new Brains();
 
-        // Speler wordt welkom geheten en de spelregels uit gelegd
+        // Global notifier
         Notificaties notify = new Notificaties();
+        // Speler wordt welkom geheten en de spelregels uit gelegd
         notify.spelStart();
 
         // Maak nieuwe computer om tegen te spelen
@@ -25,6 +26,7 @@ public class GameLoop {
             // Check of de speler gewonnen heeft
             if (brains.playerGewonnen(computerCodeArray, spelerCodeArray)) {
                 notify.gewonnen();
+                break;
                 // De speler heeft niet gewonnen
             } else {
                 notify.nietGewonnen();
