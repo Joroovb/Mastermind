@@ -29,8 +29,8 @@ class Brains {
         // reset het aantal correct geraden letters naar 0
         int charInCode = 0;
         //check of de speler letters heeft geraden die in de computercode staan
-        for (char c : y) {
-            if (Arrays.toString(x).indexOf(c) != -1) {
+        for (char c : x) {
+            if (Arrays.toString(y).indexOf(c) != -1) {
                 ++charInCode;
             }
         }
