@@ -4,6 +4,8 @@ public class Speler {
 
     // Boolean om op te slaan of de speler gewonnen heeft
     boolean heeftGewonnen = false;
+    // Toegestane letters
+    String s = "abcdef";
 
     public char[] raden() {
         // speler wordt gevraagd om code in te geven

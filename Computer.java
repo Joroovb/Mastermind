@@ -10,17 +10,17 @@ class Computer {
         Random rand = new Random();
 
         // String die de gegenereerde String van de computercode bewaard
-        StringBuilder computerCodeGenerate = new StringBuilder();
+        String computerCodeGenerate = "";
 
         // Generate vier letter code
         while (computerCodeGenerate.length() < 4) {
             char character = s.charAt(rand.nextInt(s.length()));
-            computerCodeGenerate.append(character);
+            computerCodeGenerate = computerCodeGenerate + character;
         }
 
         // Stop deze in array en return het array
-        char[] computerCode = computerCodeGenerate.toString().toCharArray();
+        char[] computerCode = computerCodeGenerate.toCharArray();
         System.out.println(computerCode);
-        return computerCodeGenerate.toString().toCharArray();
+        return computerCodeGenerate.toCharArray();
     }
 }
