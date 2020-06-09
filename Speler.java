@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Speler {
 
+    // Boolean om op te slaan of de speler gewonnen heeft
+    boolean heeftGewonnen = false;
+
     public char[] raden() {
         // speler wordt gevraagd om code in te geven
         System.out.println("Please enter the four letter code:");
@@ -26,7 +29,6 @@ public class Speler {
         } else if (userInput.length() < 4) {
             System.out.println("Please try again!");
             raden();
-
         } else {
 
         }

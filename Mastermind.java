@@ -2,6 +2,8 @@ public class Mastermind {
 
     void start() {
         // Speler wordt welkom geheten en de spelregels uit gelegd
+        Notificaties notify = new Notificaties();
+        notify.spelStart();
 
         // Maak nieuwe computer om tegen te spelen
         Computer computer = new Computer();
@@ -10,9 +12,12 @@ public class Mastermind {
 
         // Maak nieuwe speler om te spelen
         Speler speler = new Speler();
-        // Start een beurt voor de speler
-        speler.raden();
 
+        while (!speler.heeftGewonnen) {
+            // Start een beurt voor de speler
+            speler.raden();
+            speler.heeftGewonnen = true;
+        }
         //for (char letter : userCode) {
         //    if (letter == ) {
 
@@ -27,15 +32,4 @@ public class Mastermind {
 
 
     }
-public class Notificaties {
-
-        void spelStart() {
-            System.out.println( "Welkom bij Mastermind!\n" +
-                                "In dit spel moet je de code van de computer raden!\n" +
-                                "Het gaat om een code van vier letters.\n" +
-                                "Alleen de letters a, b, c, d, e & f zijn toegestaan.\n" +
-                                "Je hebt oneindig aantal pogingen, dus succes!");
-        }
-
-}
 }
