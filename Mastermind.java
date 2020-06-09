@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Mastermind {
 
     void start() {
@@ -8,14 +10,22 @@ public class Mastermind {
         // Maak nieuwe computer om tegen te spelen
         Computer computer = new Computer();
         //Computer genereert een code
-        computer.generateCode();
+        char[] computerCodeArray = computer.generateCode();
 
         // Maak nieuwe speler om te spelen
         Speler speler = new Speler();
 
         while (!speler.heeftGewonnen) {
             // Start een beurt voor de speler
-            speler.raden();
+            char[] spelerCodeArray =  speler.raden();
+
+            if (Arrays.equals(computerCodeArray, spelerCodeArray)) {
+                System.out.println("wow, dit is cool");
+            } else {
+                System.out.println("wow dit is niet cool");
+            }
+
+
             speler.heeftGewonnen = true;
         }
         //for (char letter : userCode) {
