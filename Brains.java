@@ -13,6 +13,11 @@ public class Brains {
             return false;
         }
     }
+    if ((antwoord.contains(code.get(i))) && (!antwoord.get(i).equals(code.get(i)))) {
+                    aantalLettersJuist += 1;
+                    System.out.println("aantal letters juist " + aantalLettersJuist);
+                    i++;
+                }
 
     // Checkt hoeveel letters op de juiste plaats staan. Returned int
     public int charCorrectPosition() {

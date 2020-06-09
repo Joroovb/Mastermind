@@ -1,12 +1,16 @@
 import java.util.Scanner;
 
 public class Speler {
+    // Global notifier
+    Notificaties notify = new Notificaties();
 
     // Boolean om op te slaan of de speler gewonnen heeft
     boolean heeftGewonnen = false;
+
     // Toegestane letters
     String s = "abcdef";
 
+    // Methode waarmee de speler kan raden
     public char[] raden() {
         // speler wordt gevraagd om code in te geven
         System.out.println("Please enter the four letter code:");
@@ -24,16 +28,14 @@ public class Speler {
 
         // als de speler niet een vier letterig woord in vult krijgt de speler een try again bericht
         if (userCode.length > 4) {
-            System.out.println("Try Again!");
+            notify.badInput();
             // loop de speel methode
             raden();
             // als de speler niet een vier letterig woord in vult krijgt de speler een try again bericht
         } else if (userInput.length() < 4) {
-            System.out.println("Please try again!");
+            notify.badInput();
             raden();
-        } else {
-
         }
-        return userCode;
+            return userCode;
     }
 }
