@@ -22,9 +22,6 @@ public class Speler {
 
         // code wordt vertaald naar iets wat vergeleken kan worden met de code van de computer
         char[] userCode = userInput.toCharArray();
-        for (char letter : userCode) {
-            System.out.println(letter);
-        }
 
         // als de speler niet een vier letterig woord in vult krijgt de speler een try again bericht
         if (userCode.length > 4) {
