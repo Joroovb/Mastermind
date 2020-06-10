@@ -1,4 +1,3 @@
-//TODO Limit what a user can input
 import java.util.Scanner;
 
 public class Speler {

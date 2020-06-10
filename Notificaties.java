@@ -1,11 +1,11 @@
 public class Notificaties {
 
     void spelStart() {
-        System.out.println( "\nWelkom bij Mastermind!\n" +
-                "In dit spel moet je de code van de computer raden!\n" +
-                "Het gaat om een code van vier letters.\n" +
-                "Alleen de letters a, b, c, d, e & f zijn toegestaan.\n" +
-                "Je hebt oneindig aantal pogingen, dus succes!\n");
+        System.out.println( "\nWelcome to Mastermind!\n" +
+                "In this game you have to crack a code!\n" +
+                "You will see a four letter code.\n" +
+                "This code will consist of the letters a, b, c, d, e & f.\n" +
+                "You have infinite attempts, so GLHF!\n");
     }
 
     void raden() {
@@ -13,11 +13,11 @@ public class Notificaties {
     }
 
     void gewonnen() {
-        System.out.println("Je hebt gewonnen van de computer! Hackerman!\n");
+        System.out.println("You have beaten the computer! Hackerman!\n");
     }
 
     void nietGewonnen() {
-        System.out.println("Helaas, dat was niet het goede antwoord!\n");
+        System.out.println("Incorrect code! Try Again!\n");
     }
 
     void badInput() {
@@ -25,12 +25,18 @@ public class Notificaties {
     }
 
     void correctPosition(int x) {
-        // TODO adjust letter(s)
-        System.out.println("You have put " + x + " letters in the correct position!\n");
+        String letter = "letters";
+        if (x == 1) {
+            letter = "letter";
+        }
+        System.out.println("You have put " + x + " " + letter + " in the correct position!\n");
     }
 
     void charInCode (int x) {
-        // TODO adjust letter(s)
-        System.out.println("You have " + x + " that are also in the code!\n");
+        String letter = "letters";
+        if (x == 1) {
+            letter = "letter";
+        }
+        System.out.println("You have guessed " + x + " " + letter + " correctly, but not in the correct position!\n");
     }
 }
