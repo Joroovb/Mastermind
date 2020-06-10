@@ -37,6 +37,6 @@ public class Notificaties {
         if (x == 1) {
             letter = "letter";
         }
-        System.out.println("You have guessed " + x + " " + letter + " correctly, but not in the correct position!\n");
+        System.out.println("You have guessed " + x + " " + letter + " correctly!\n");
     }
 }

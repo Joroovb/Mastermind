@@ -26,7 +26,7 @@ public class GameLoop {
             // Checkt of de input valid is
             if (!brains.isInputValid(spelerCodeArray)) {
                 notify.badInput();
-                break;
+                continue;
             }
 
             // Check of de speler gewonnen heeft
@@ -38,11 +38,11 @@ public class GameLoop {
                 notify.nietGewonnen();
             }
 
-            // Check of de speler letters goed geraden heeft en op de correcte positie heeft staan
-            brains.correctPositions(computerCodeArray, spelerCodeArray);
-
             // Check of de speler letters goed geraden heeft
             brains.correctLetters(computerCodeArray, spelerCodeArray);
+
+            // Check of de speler letters goed geraden heeft en op de correcte positie heeft staan
+            brains.correctPositions(computerCodeArray, spelerCodeArray);
         }
     }
 }
