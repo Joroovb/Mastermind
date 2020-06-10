@@ -20,7 +20,6 @@ class Computer {
 
         // Stop deze in array en return het array
         char[] computerCode = computerCodeGenerate.toCharArray();
-        System.out.println(computerCode);
         return computerCodeGenerate.toCharArray();
     }
 }
