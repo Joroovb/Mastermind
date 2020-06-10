@@ -5,8 +5,15 @@ class Brains {
     Notificaties notify = new Notificaties();
 
     public boolean isInputValid (char[] y) {
+        final String s = "abcdef";
+
         if (y.length != 4) {
             return false;
+        }
+        for (char c : y) {
+            if (s.indexOf(c) == -1) {
+                return false;
+            }
         }
         for (char c : y) {
             if (!Character.isLetter(c)) {

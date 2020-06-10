@@ -8,6 +8,10 @@ public class Notificaties {
                 "Je hebt oneindig aantal pogingen, dus succes!\n");
     }
 
+    void raden() {
+        System.out.println("Please enter the four letter code:\n");
+    }
+
     void gewonnen() {
         System.out.println("Je hebt gewonnen van de computer! Hackerman!\n");
     }

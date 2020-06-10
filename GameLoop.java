@@ -25,7 +25,7 @@ public class GameLoop {
 
             // Checkt of de input valid is
             if (!brains.isInputValid(spelerCodeArray)) {
-                System.out.println("Nice try!");
+                notify.badInput();
                 break;
             }
 

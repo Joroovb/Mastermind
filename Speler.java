@@ -11,7 +11,7 @@ public class Speler {
     // Methode waarmee de speler kan raden
     public char[] raden() {
         // speler wordt gevraagd om code in te geven
-        System.out.println("Please enter the four letter code:");
+        notify.raden();
 
         // speler voert code in en de code wordt getoont
         Scanner usr = new Scanner(System.in);
@@ -21,6 +21,6 @@ public class Speler {
         // code wordt vertaald naar iets wat vergeleken kan worden met de code van de computer
         char[] userCode = userInput.toCharArray();
 
-            return userCode;
+        return userCode;
     }
 }

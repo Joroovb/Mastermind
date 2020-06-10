@@ -5,7 +5,7 @@ class Computer {
     // Methode om vier karakters te kiezen
     public char[] generateCode() {
         // De karakters die in de computer code gebruikt kunnen worden
-        String s = "abcdef";
+        final String s = "abcdef";
         // Random generator voor de computercode
         Random rand = new Random();
 
