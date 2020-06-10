@@ -16,11 +16,11 @@ public class Speler {
         // speler voert code in en de code wordt getoont
         Scanner usr = new Scanner(System.in);
         String userInput = usr.nextLine();
-        System.out.println(userInput);
+
+        // Maakt de user input lowercase
+        userInput = userInput.toLowerCase();
 
         // code wordt vertaald naar iets wat vergeleken kan worden met de code van de computer
-        char[] userCode = userInput.toCharArray();
-
-        return userCode;
+        return userInput.toCharArray();
     }
 }
