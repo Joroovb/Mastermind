@@ -13,9 +13,10 @@ class Computer {
         String computerCodeGenerate = "";
 
         // Generate vier letter code
+        StringBuilder sb = new StringBuilder();
         while (computerCodeGenerate.length() < 4) {
-            char character = s.charAt(rand.nextInt(s.length()));
-            computerCodeGenerate = computerCodeGenerate + character;
+            sb.append(s.charAt(rand.nextInt(s.length())));
+            computerCodeGenerate = sb.toString();
         }
 
         // Stop deze in array en return het array
