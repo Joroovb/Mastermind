@@ -4,6 +4,18 @@ class Brains {
     // Global notifier
     Notificaties notify = new Notificaties();
 
+    public boolean isInputValid (char[] y) {
+        if (y.length != 4) {
+            return false;
+        }
+        for (char c : y) {
+            if (!Character.isLetter(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean playerGewonnen(char[] x, char[] y) {
         // x = computer, y = speler
         // Check of de speler gewonnen heeft

@@ -21,16 +21,6 @@ public class Speler {
         // code wordt vertaald naar iets wat vergeleken kan worden met de code van de computer
         char[] userCode = userInput.toCharArray();
 
-        // als de speler niet een vier letterig woord in vult krijgt de speler een try again bericht
-        if (userCode.length > 4) {
-            notify.badInput();
-            // loop de speel methode
-            raden();
-            // als de speler niet een vier letterig woord in vult krijgt de speler een try again bericht
-        } else if (userInput.length() < 4) {
-            notify.badInput();
-            raden();
-        }
             return userCode;
     }
 }

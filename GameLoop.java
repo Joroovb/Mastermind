@@ -23,6 +23,12 @@ public class GameLoop {
             // Start een beurt voor de speler
             char[] spelerCodeArray = speler.raden();
 
+            // Checkt of de input valid is
+            if (!brains.isInputValid(spelerCodeArray)) {
+                System.out.println("Nice try!");
+                break;
+            }
+
             // Check of de speler gewonnen heeft
             if (brains.playerGewonnen(computerCodeArray, spelerCodeArray)) {
                 notify.gewonnen();
