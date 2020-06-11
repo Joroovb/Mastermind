@@ -5,6 +5,7 @@ public class Notificaties {
                 "In this game you have to crack a code!\n" +
                 "You will see a four letter code.\n" +
                 "This code will consist of the letters a, b, c, d, e & f.\n" +
+                "You can always enter q to exit the program!\n" +
                 "You have infinite attempts, so GLHF!\n");
     }
 
@@ -21,7 +22,8 @@ public class Notificaties {
     }
 
     void badInput() {
-        System.out.println("\nThis is not a correct input! Please enter a 4 letter code consisting of the letters a, b, c, d, e or f!\n");
+        System.out.println( "\nThis is not a correct input! Please enter a 4 letter code consisting of the letters a, b, c, d, e or f!\n" +
+                            "If you want to quit, enter q.\n");
     }
 
     void correctPosition(int x) {

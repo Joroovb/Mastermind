@@ -19,6 +19,11 @@ public class Speler {
         // Maakt de user input lowercase
         userInput = userInput.toLowerCase();
 
+        // Laat de speler stoppen door een 'q' in te voeren
+        if (userInput.equals("q")) {
+            System.exit(0);
+        }
+
         // code wordt vertaald naar iets wat vergeleken kan worden met de code van de computer
         return userInput.toCharArray();
     }
