@@ -7,3 +7,6 @@ GameLoop.class
 Notificaties.class
 Speler.class
 SpelStart.class
+Main.class
+sources.txt
+run.sh
