@@ -26,6 +26,8 @@ public class Notificaties {
 
     void gewonnen() {
         System.out.println("You have beaten the computer! Hackerman!\n");
+        Sound sound = new Sound();
+        sound.won();
     }
 
     void nietGewonnen() {
