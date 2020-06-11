@@ -6,12 +6,17 @@ import java.io.File;
 
 public class Sound {
 
-     void lost () {
+     void lost() {
         File bad = new File("lost.wav");
         PlaySound(bad);
     }
 
-    void won () {
+    void badInput() {
+         File input = new File("bad.wav");
+         PlaySound(input);
+    }
+
+    void won() {
         File good = new File("won.wav");
         PlaySound(good);
     }

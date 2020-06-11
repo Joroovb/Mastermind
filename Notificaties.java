@@ -37,6 +37,8 @@ public class Notificaties {
     void badInput() {
         System.out.println( "\nThis is not a correct input! Please enter a 4 letter code consisting of the letters a, b, c, d, e or f!\n" +
                             "If you want to quit, enter q.\n");
+        Sound sound = new Sound();
+        sound.badInput();
     }
 
     void correctPosition(int x) {
